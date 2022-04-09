@@ -1,0 +1,35 @@
+pipeline
+{
+agent any
+stages
+{
+  stage('Commit')
+  {
+   steps
+   {
+    echo "Source code download from GIT"
+   }
+  }
+  stage('Build')
+  {
+   steps
+   {
+    echo "This is build from maven"
+   }
+  }
+  stage('Deploy')
+  {
+   steps
+   {
+    echo "This is deploy proj run with docker tool"
+   }
+  }
+  stage('Monitor')
+  {
+   steps
+   {
+    echo "This is monitoring project run with Splunk tool"
+   }
+  }
+}
+
